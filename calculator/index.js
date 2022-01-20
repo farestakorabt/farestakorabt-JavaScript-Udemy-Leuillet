@@ -68,10 +68,12 @@ try {
       throw new Error("Une erreur est survenue !");
   }
   alert("Voici le resultat: " + resultat);
-} 
+}
 catch (error) {
   alert(error);
 }
+
+// ------------------------------------------------------------------------------------------------------------
 
 // // Fonction pour additionner
 // function addition(nombreA, nombreB) {
@@ -136,3 +138,4 @@ catch (error) {
 // catch(error) {
 //     alert(error); // Si une erreur est survenue, on affiche l'erreur
 // }
+
