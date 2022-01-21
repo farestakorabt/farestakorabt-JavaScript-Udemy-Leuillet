@@ -439,5 +439,10 @@ let money = ["dinar", "dollar", "franc"];
 // avec decomposition
 
 let [firstMoney, ...others] = money;
-console.log("firstMoney:", firstMoney);
-console.log("money:", money);
+// console.log("firstMoney:", firstMoney);
+// console.log("money:", money);
+
+// ------------------
+// Le BOM (browser object model)
+// ------------------
+

@@ -1,0 +1,24 @@
+html,
+body {
+  padding: 5vw;
+  /* margin: 0; */
+  font-family: arial;
+  background-color: #ececeb;
+}
+
+header {
+  background-color: #c9d1d3;
+  text-align: center;
+  padding: 15px;
+  color: white;
+}
+
+.container {
+  /* width: 800px; */
+  margin: 0 auto;
+}
+
+.monStyle {
+  background-color: yellow;
+  font-size: 4vw;
+}
