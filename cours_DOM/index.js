@@ -16,7 +16,7 @@ let h1Bis = document.querySelector("h1");
 // on peut utiliser cette methode egalement
 // => let h1Bis = document.getElementsByTagName("h1")[0];
 // h1Bis.textContent = "Hello there !";
-// h1Bis.innerHTML = "<div style='background: lime'>Welcome home</div> ";
+// h1Bis.innerHTML = "<div style='backgroundColor: lime'>Welcome home</div> ";
 
 // Ajouter des éléments au DOM (append, prepend, insertBefore)
 
@@ -63,7 +63,7 @@ document.querySelector(".container").prepend(helloWorld);
 // Modifier le style des éléments
 // 1ere methode : décomposée
 let header2 = document.querySelector("header");
-// header2.style.backgroundColor = "tomato";
+// header2.style.backgroundColorColor = "tomato";
 
 // 2eme methode : directe
 // document.querySelector("h1").style.color = "green";
@@ -73,3 +73,7 @@ let header2 = document.querySelector("header");
 
 let h1Last = (document.querySelector("p").classList = "monStyle");
 // querySelector selectionne le 1er element
+
+// --------------------------
+//  Les evenements (events)
+// --------------------------

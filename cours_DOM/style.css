@@ -3,11 +3,11 @@ body {
   padding: 5vw;
   /* margin: 0; */
   font-family: arial;
-  background-color: #ececeb;
+  backgroundcolor-color: #ececeb;
 }
 
 header {
-  background-color: #c9d1d3;
+  backgroundcolor-color: #c9d1d3;
   text-align: center;
   padding: 15px;
   color: white;
@@ -19,6 +19,6 @@ header {
 }
 
 .monStyle {
-  background-color: yellow;
+  backgroundcolor-color: yellow;
   font-size: 4vw;
 }

@@ -247,19 +247,19 @@ function concatenation(tableau) {
 // }
 
 // let maFonction = bonjour("Evan");
-// // maFonction();
+// maFonction();
 
-// function timer() {
-//   let secondes = 0;
+function timer() {
+  let secondes = 0;
 
-//   let maClosure = () => {
-//     return ++secondes;
-//   };
+  let maClosure = () => {
+    return ++secondes;
+  };
 
-//   return maClosure;
-// }
+  return maClosure;
+}
 
-// let monTimer = timer();
+let monTimer = timer();
 // console.log(monTimer()); // => 0
 // console.log(monTimer()); // => 1
 
@@ -445,4 +445,3 @@ let [firstMoney, ...others] = money;
 // ------------------
 // Le BOM (browser object model)
 // ------------------
-
