@@ -1,11 +1,11 @@
 html,
 body {
-  background-color: #232020;
+  background-color: #2d4358;
   min-width: 500px;
-}
+  font-family: 'Chivo', sans-serif;}
 
 header {
-  color: #ff7315;
+  color: cyan;
   text-align: center;
   font-size: 3em;
 }
@@ -20,13 +20,23 @@ header {
 }
 
 .plus {
-  background-color: #f67280;
+  background-color: #e05764;
 }
 
 .moins {
-  background-color: #ffa372;
+  background-color: tan;
 }
 
 .fini {
-  background-color: #0c9463;
+  background-color: #127551;
+}
+
+.btn-primary {
+  background-color: rgb(212, 171, 82);
+  border: none;
+  border-radius: 0.8vw;
+}
+
+.btn-primary:hover {
+  background-color: rgb(133, 114, 73);
 }
