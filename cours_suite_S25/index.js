@@ -5,16 +5,16 @@ let maDatePrecise = new Date(2922, 0, 31, 16, 33);
 // console.log("maDatePrecise:", maDatePrecise); // Sat Jan 31 2922 16:33:00
 
 let dateActuelle = new Date();
-console.log(dateActuelle.getFullYear());
-console.log(dateActuelle.getDay()); // jour de la semaine (1 => lundi)
+// console.log(dateActuelle.getFullYear());
+// console.log(dateActuelle.getDay()); // jour de la semaine (1 => lundi)
 // jour de la semaine commence a partir de dimanche (index 0)
 
-console.log("today: " + maDatePrecise.getDate()); // jour du mois => 31
+// console.log("today: " + maDatePrecise.getDate()); // jour du mois => 31
 
-console.log("getUTCDay: " + dateActuelle.getUTCDay());
+// console.log("getUTCDay: " + dateActuelle.getUTCDay());
 
 dateActuelle.setFullYear(1988);
-console.log("dateActuelle:", dateActuelle.getFullYear()); // => 1988
+// console.log("dateActuelle:", dateActuelle.getFullYear()); // => 1988
 
 // format local
 
@@ -35,8 +35,8 @@ let dateLocale = dateActuelle2.toLocaleString(navigator.language, {
   second: "numeric",
 });
 
-console.log(dateLocale);
-console.log("--------------------------");
+// console.log(dateLocale);
+// console.log("--------------------------");
 // -------------------------------------------------------------
 // template string
 
@@ -51,8 +51,8 @@ console.log("--------------------------");
 
 let date = new Date().getFullYear();
 let copyright = `${date} @ Azulation `;
-console.log(copyright);
-console.log("--------------------------");
+// console.log(copyright);
+// console.log("--------------------------");
 
 //
 
@@ -66,6 +66,23 @@ let panier = `Dans votre panier, vous avez ${aliment.fruits} fruit(s), ${aliment
 let panier2 = `Dans votre panier, vous avez ${
   aliment.fruits + aliment.legumes + aliment.biscuits
 } articles.`;
-console.log(panier);
-console.log("--------------------");
-console.log(panier2);
+// console.log(panier);
+// console.log("--------------------");
+// console.log(panier2);
+
+// ----------------------------------
+// methode asynchrone , callback, promesses
+// ----------------------------------
+
+// le JS est un langage synchrone (une tache à la fois)
+
+let i = 0;
+
+console.log("Fonction commencée");
+
+while (i < 1111) {
+  i++;
+  console.log('heloo');
+}
+
+console.log("Fonction terminée");
