@@ -70,19 +70,3 @@ let panier2 = `Dans votre panier, vous avez ${
 // console.log("--------------------");
 // console.log(panier2);
 
-// ----------------------------------
-// methode asynchrone , callback, promesses
-// ----------------------------------
-
-// le JS est un langage synchrone (une tache à la fois)
-
-let i = 0;
-
-console.log("Fonction commencée");
-
-while (i < 1111) {
-  i++;
-  console.log('heloo');
-}
-
-console.log("Fonction terminée");
