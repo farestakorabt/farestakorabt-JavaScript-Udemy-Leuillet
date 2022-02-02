@@ -11,7 +11,7 @@ function recupererTemperature(ville) {
   let url =
     "https://api.openweathermap.org/data/2.5/weather?q=" +
     ville +
-    "&appid=931e40e38851bdf64ba5eae34af556dd&units=metric";
+    "&appid=666&units=metric";
 
   let requete = new XMLHttpRequest();
 
