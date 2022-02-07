@@ -1,37 +1,52 @@
-let ville;
-recupererTemperature("Paris");
+// jQuery method
+let ville = recupererTemperature("paris");
 
-let changerVille = document.querySelector("#changer");
-changerVille.addEventListener("click", () => {
-  ville = prompt("Veuillez entrer une ville");
-  recupererTemperature(ville);
+let btn = document.querySelector("#changer");
+btn.addEventListener("click", () => {
+  let villeChoisie = prompt("Quelle ville ?");
+  recupererTemperature(villeChoisie);
 });
 
 function recupererTemperature(ville) {
-   url =
+  // jQuery
+  let url =
     "https://api.openweathermap.org/data/2.5/weather?q=" +
     ville +
     "&appid=931e40e38851bdf64ba5eae34af556dd&units=metric";
 
-  let requete = new XMLHttpRequest();
+  $.ajax({
+    type: "GET",
+    url: url,
+    dataType: "json",
+    success: (data) => {
+      $("#temperature_label").text(data.main.temp);
+      $("#ville").text(ville);
+    },
+    error: () => {
+      alert("Erreur survenue, revenez plus tard");
+    },
+  });
 
-  // recuperation des données avec GET
-  requete.open("GET", url);
-  requete.responseType = "json";
-  requete.send();
+  // JS
+  // let requete = new XMLHttpRequest();
 
-  requete.onload = function () {
-    if (requete.readyState === XMLHttpRequest.DONE) {
-      if (requete.status === 200) {
-        let reponse = requete.response;
-        let temperature = reponse.main.temp;
-        document.querySelector("#temperature_label").textContent = temperature;
+  // requete.open("GET", url);
 
-        let villeActuelle = reponse.name;
-        document.querySelector("#ville").textContent = villeActuelle;
-      } else {
-        alert("Un problème est survenu, veuillez revenir ulterieurement !");
-      }
-    }
-  };
+  // requete.responseType = "json";
+  // requete.send();
+
+  // requete.onload = function () {
+  //   if (requete.readyState === XMLHttpRequest.DONE) {
+  //     if (requete.status === 200) {
+  //       let reponse = requete.response;
+  //       let temperature = reponse.main.temp;
+
+  //       document.querySelector("#temperature_label").textContent = temperature;
+
+  //       document.querySelector("#ville").textContent = ville;
+  //     }
+  //   } else {
+  //     alert("Un problème est survenu, revenez plus tard.");
+  //   }
+  // };
 }

@@ -65,38 +65,38 @@
 // // Créer un objet avec Object()
 // // ----------------------------
 
-// var monObjet = new Object();
-// monObjet.titre = "Le rouge et le noire";
+var monObjet = new Object();
+monObjet.titre = "Le rouge et le noire";
 
-// // --------------
-// // Comprendre l'héritage
-// // --------------
+// --------------
+// Comprendre l'héritage
+// --------------
 
-// // Animal (nombreDePattes, poids)
-// function Animal(nombreDePattes, poids) {
-//   this.nombreDePattes = nombreDePattes;
-//   this.poids = poids;
+// Animal(nombreDePattes, poids);
+function Animal(nombreDePattes, poids) {
+  this.nombreDePattes = nombreDePattes;
+  this.poids = poids;
 
-//   Animal.prototype.presentation = function () {
-//     console.log(
-//       "Bonjour, j'ai " +
-//         this.nombreDePattes +
-//         " pattes,  et je pèse " +
-//         this.poids +
-//         "."
-//     );
-//   };
-// }
-// // var monAnimal = new Object("ailes", "gros");
-// // console.log("monAnimal:", monAnimal);
-// // oiseau (nombreDePattes, poids / longueurDesAiles)
-// function Oiseau(nombreDePattes, poids, longueurDesAiles) {
-//   Animal.call(this, nombreDePattes, poids);
-//   // la fonction call() permet d'appeler une fonction constructeur:
-//   // en premier parametre (this), on donne l'objet actuel, ensuite, on donne les
-//   // arguments de son constructeur
-//   this.longueurDesAiles = longueurDesAiles;
-// }
+  Animal.prototype.presentation = function () {
+    console.log(
+      "Bonjour, j'ai " +
+        this.nombreDePattes +
+        " pattes,  et je pèse " +
+        this.poids +
+        "."
+    );
+  };
+}
+var monAnimal = new Object("ailes", "gros");
+console.log("monAnimal:", monAnimal);
+// oiseau(nombreDePattes, poids / longueurDesAiles);
+function Oiseau(nombreDePattes, poids, longueurDesAiles) {
+  Animal.call(this, nombreDePattes, poids);
+  // la fonction call() permet d'appeler une fonction constructeur:
+  // en premier parametre (this), on donne l'objet actuel, ensuite, on donne les
+  // arguments de son constructeur
+  this.longueurDesAiles = longueurDesAiles;
+}
 
 // // Mammifere (nombreDePattes, poids / typeDePoils)
 // function Mammifere(nombreDePattes, poids, typeDePoils) {
@@ -160,39 +160,39 @@
 // // Créer un objet avec une class
 // // ----------------------------
 
-// class Utilisateur2 {
-//   constructor(prenom, nom, email) {
-//     this.prenom = prenom;
-//     this.nom = nom;
-//     this.email = email;
-//   }
+class Utilisateur2 {
+  constructor(prenom, nom, email) {
+    this.prenom = prenom;
+    this.nom    = nom;
+    this.email  = email;
+  }
 
-//   // un getter (accesseur) permet de récupérer une propriété
-//   get nomComplet() {
-//     return this.prenom + " " + this.nom;
-//   }
+  // // un getter (accesseur) permet de récupérer une propriété
+  // get nomComplet() {
+  //   return this.prenom + " " + this.nom;
+  // }
 
-//   // un setter (mutateur) permet de définir une propriété
-//   set nomComplet(valeur) {
-//     [this.prenom, this.nom] = valeur.split(" ");
-//   }
+  // // un setter (mutateur) permet de définir une propriété
+  // set nomComplet(valeur) {
+  //   [this.prenom, this.nom] = valeur.split(" ");
+  // }
 
-//   sePresenterBis() {
-//     console.log(
-//       "Bonjour, je m'appelle " +
-//         this.prenom +
-//         " " +
-//         this.nom +
-//         " et vous pouvez me contacter sur mon email: " +
-//         this.email
-//     );
-//   }
-// }
-// var monPote = new Utilisateur2("Eric", "Cartman", "cartmanland@hello.dv");
-// console.log(monPote.nomComplet);
+  sePresenterBis() {
+    console.log(
+      "Bonjour, je m'appelle " +
+        this.prenom +
+        " " +
+        this.nom +
+        " et vous pouvez me contacter sur mon email: " +
+        this.email
+    );
+  }
+}
+var monPote = new Utilisateur2("Eric", "Cartman", "cartmanland@hello.dv");
+console.log(monPote.nomComplet);
 
-// monPote.nomComplet = "Bill Murray";
-// console.log(monPote.nomComplet);
+monPote.nomComplet = "Bill Murray";
+console.log(monPote.nomComplet);
 
 class Animal2 {
   constructor(nombreDePattes2, poids2) {
