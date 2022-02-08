@@ -28,7 +28,7 @@ document.write("-------------"); // s'ajoute à la fin
 // 2eme methode, ajouter un element brut
 
 let h1Bis2 = document.querySelector("h1");
-// h1Bis2.append("test");
+// h1Bis2.append("tesddddddddddddt");
 
 // 3eme methode, (celle pour les objets)
 // 1 creer un element
@@ -38,7 +38,7 @@ helloWorld.textContent = "Hello world !";
 
 // 3 l'ajouter
 
-document.body.append(helloWorld); // a utiliser
+// document.body.append(helloWorld + ' pssst'); // a utiliser
 // document.body.appendChild(helloWorld); // a ne pas utiliser, ca ne prend uniquement une variable et pas de text
 
 //document.body.insertBefore(helloWorld, document.querySelector(".container"));
@@ -63,11 +63,12 @@ document.querySelector(".container").prepend(helloWorld);
 // Modifier le style des éléments
 // 1ere methode : décomposée
 let header2 = document.querySelector("header");
-// header2.style.backgroundColorColor = "tomato";
+
+header2.style.backgroundColor = "tomato";
 
 // 2eme methode : directe
-// document.querySelector("h1").style.color = "green";
-// document.querySelector("h1").style.marginTop = 50 + "px";
+document.querySelector("h1").style.color = "green";
+document.querySelector("h1").style.marginTop = 50 + "px";
 
 // 3eme methode : avec classe => a favoriser
 

@@ -2,7 +2,7 @@
 
 // 1er janvier 1970
 let maDatePrecise = new Date(2922, 0, 31, 16, 33);
-// console.log("maDatePrecise:", maDatePrecise); // Sat Jan 31 2922 16:33:00
+// console.log(maDatePrecise); // Sat Jan 31 2922 16:33:00
 
 let dateActuelle = new Date();
 // console.log(dateActuelle.getFullYear());
@@ -26,7 +26,8 @@ let dateActuelle2 = new Date();
 // ON CHOISI LES OPTIONS QU'ON VEUT
 
 let dateLocale = dateActuelle2.toLocaleString(navigator.language, {
-  weekday: "long", // short (3 premières lettres), narrow (première lettre), long (toutes les lettres)
+  weekday: "long", // short (3 premières lettres), narrow (première lettre),
+  // long (toutes les lettres)
   year: "numeric", // numeric (xxxx), 2-digit (xx)
   month: "long", // short, narrow, long, numeric
   day: "numeric", // numeric, 2-digit
@@ -62,11 +63,12 @@ let aliment = {
   biscuits: 111,
 };
 
-let panier = `Dans votre panier, vous avez ${aliment.fruits} fruit(s), ${aliment.legumes} légume(s) et ${aliment.biscuits} biscuit(s)`;
+let panier = `Dans votre panier, vous avez ${aliment.fruits} fruit(s), 
+${aliment.legumes} légume(s) et ${aliment.biscuits} biscuit(s)`;
+
 let panier2 = `Dans votre panier, vous avez ${
   aliment.fruits + aliment.legumes + aliment.biscuits
 } articles.`;
-// console.log(panier);
-// console.log("--------------------");
-// console.log(panier2);
-
+console.log(panier);
+console.log("--------------------");
+console.log(panier2);

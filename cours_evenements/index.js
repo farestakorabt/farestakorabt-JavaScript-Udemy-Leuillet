@@ -64,5 +64,5 @@ let timeOut = setTimeout(() => {
 // ------------------------------
 // setInterval
 // combien de temps entre chaque
-// let interval = setInterval("console.log('Bonjour !')", 200);
+// let interval = setInterval("console.log('Bonjour !')", 2000);
 // clearInterval(interval);

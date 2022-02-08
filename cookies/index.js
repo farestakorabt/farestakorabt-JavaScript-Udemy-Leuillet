@@ -26,7 +26,7 @@ document.cookie =
 
 // Voici une fiche technique résumant l'ensemble des paramètres pour les cookies.
 
-// path - Permet de préciser sur lequel répertoire (dossier) est disponible le cookie
+// path - Permet de préciser sur quel répertoire (dossier) est disponible le cookie
 
 // domain - Permet de préciser sur quel nom de domaine est disponible le cookie
 

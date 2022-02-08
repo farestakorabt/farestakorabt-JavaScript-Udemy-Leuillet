@@ -27,13 +27,13 @@
 //   let tailleCalculee = Math.pow(tailleEnMetre, 2);
 //   let resultat = poids / tailleCalculee;
 
-//   return Math.round(resultat) ;
+//   return Math.round(resultat);
 
 //   // on peut resumer ça avec cette formule
 //   // => return Math.round(poids / Math.pow(taille / 100, 2));
 // }
 
-// alert(calculerIMC(poids, taille));
+// alert("Votre indice IMC est de : " + calculerIMC(poids, taille));
 
 // do {
 //   var prenom = prompt("C'est quoi votre nom ?");
@@ -138,7 +138,8 @@ let tableauSimple = [true, "karl", 121, "Last Kingdom"];
 // console.log(tableauSimple.indexOf('Last Kingdom')); // => 3
 // console.log(tableauSimple.join("/ "));
 tableauSimple.splice(1, 0, "random", "pie");
-// console.log("tableauSimple:", tableauSimple); // => (index, combien a supprmier) => [true, 'random', 'pie', 'karl', 121, 'Last Kingdom']
+// console.log("tableauSimple:", tableauSimple); 
+// => (index, combien a supprmier) => [true, 'random', 'pie', 'karl', 121, 'Last Kingdom']
 
 let monTableau2D = [
   ["Maerk", "Jane", "Camille"],
@@ -153,7 +154,10 @@ let monTableau2D = [
 // monTableau2D[0].splice(0, 1, "milk");
 // console.log("monTableau2D:", monTableau2D); // => ['milk', 'Jane', 'Camille'], ['Carl', 'Honey', 'Lille']
 
+
 // console.log(monTableau2D[0][2]); // => Camille
+
+// Pop, Push, Shift and Unshift
 
 // tableaux associatifs
 let monTableauAssociatif = { prenom: "mark", nom: "zuck", age: 55 };
@@ -236,8 +240,10 @@ function concatenation(tableau) {
 // maFonction2();
 
 // ------------------
-// Les closures
+// Les closures (function in function)
 // ------------------
+
+// a retenir : la closure sauvegarde les variables locales
 
 // function bonjour(prenom) {
 //   let resultat = console.log("Bonjour " + prenom);
@@ -249,17 +255,17 @@ function concatenation(tableau) {
 // let maFonction = bonjour("Evan");
 // maFonction();
 
-function timer() {
-  let secondes = 0;
+// function timer() {
+//   let secondes = 0;
 
-  let maClosure = () => {
-    return ++secondes;
-  };
+//   let maClosure = () => {
+//     return ++secondes;
+//   };
 
-  return maClosure;
-}
+//   return maClosure;
+// }
 
-let monTimer = timer();
+// let monTimer = timer();
 // console.log(monTimer()); // => 0
 // console.log(monTimer()); // => 1
 
@@ -278,16 +284,16 @@ let monTimer = timer();
 // Les objets
 // ------------------
 
-// let chien = {
-//   couleur: "noire",
-//   age: 33,
-//   nom: "Baghee",
-//   poil: "court",
-//   // aboyer: function () {
-//   //   console.log("ouaf ouaf !");
-//   // },
-//   aboyer: () => console.log("ouaf ouaf !"),
-// };
+let chien = {
+  couleur: "noire",
+  age: 33,
+  nom: "Baghee",
+  poil: "court",
+  // aboyer: function () {
+  //   console.log("ouaf ouaf !");
+  // },
+  aboyer: () => console.log("ouaf ouaf !"),
+};
 
 // chien.aboyer();
 
@@ -310,7 +316,7 @@ let monTimer = timer();
 // Le destructuring
 // ------------------
 
-// let informations = ["seperLeger", 57, "homme"];
+// let informations = ["superLeger", 57, "homme"];
 
 // // let pseudo = informations[0];
 // // let age = informations[1];
@@ -325,7 +331,7 @@ let monTimer = timer();
 // ------------------
 
 // let nombres = [21, 85, 6, 6, 87, 9, 45, 45];
-// // let monSet = new Set(nombres);
+// let monSet = new Set(nombres);
 // let monSet = new Set();
 
 // monSet.add(54); // => 54
@@ -361,12 +367,12 @@ let monTimer = timer();
 // ------------------
 
 // let voitureA = {
-//   constructeur: "Lada",
+//   marque: "Lada",
 //   modele: "Niva",
 // };
 
 // let voitureB = {
-//   constructeur: "Peugeot",
+//   marque: "Peugeot",
 //   modele: "Lion",
 // };
 
@@ -438,9 +444,10 @@ let money = ["dinar", "dollar", "franc"];
 
 // avec decomposition
 
-let [firstMoney, ...others] = money;
-// console.log("firstMoney:", firstMoney);
-// console.log("money:", money);
+// let [firstMoney, ...others] = money;
+// console.log("firstMoney:", firstMoney); // dinar
+// console.log("money:", money); // ['dinar', 'dollar', 'franc']
+// console.log(others); // ['dollar', 'franc']
 
 // ------------------
 // Le BOM (browser object model)
